@@ -34,3 +34,8 @@ module "granted" {
 
   default_tags = local.default_tags
 }
+
+
+output "saml_acs_url" {
+  value = "https://${module.granted[0].web_cognito_user_pool_domain}/saml2/idpresponse"
+}

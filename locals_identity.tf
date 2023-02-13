@@ -14,7 +14,7 @@ locals {
 
     "aws-sso" = {
       identityStoreId      = var.aws_sso_identity_store_id
-      identityStoreRoleArn = aws_iam_role.sso_readonly.arn
+      identityStoreRoleArn = var.identity_provider_type == "aws-sso" ? aws_iam_role.sso_readonly[0].arn : null
       region               = var.aws_sso_region
     }
   })
