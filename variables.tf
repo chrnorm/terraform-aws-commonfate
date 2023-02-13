@@ -99,7 +99,7 @@ variable "administrator_group_id" {
 
 variable "identity_provider_type" {
   type        = string
-  description = "identity provider: [cognito, okta, azure, google]. okta requires SamlSSOMetadataURL to be provided"
+  description = "identity provider: [cognito, okta, azure, google, aws-sso]. okta requires SamlSSOMetadataURL to be provided"
   default     = "cognito"
 }
 
