@@ -28,6 +28,7 @@ module "granted" {
   saml_sso_metadata_content = lookup(var.sso_granted, "saml_sso_metadata_content", null)
   saml_sso_metadata_url     = lookup(var.sso_granted, "saml_sso_metadata_url", null)
   sources_version           = lookup(var.sso_granted, "sources_version", null)
+  sources_s3_bucket_id      = lookup(var.sso_granted, "sources_s3_bucket_id", "granted-releases-us-west-2")
 
   web_cognito_custom_image_file   = lookup(var.sso_granted, "cognito_custom_image_file", null)
   web_cognito_custom_image_base64 = lookup(var.sso_granted, "cognito_custom_image_base64", null)
@@ -36,6 +37,31 @@ module "granted" {
 }
 
 
+resource "commonfate_access_rule" "example" {
+  name        = "Terraform Example"
+  description = "Access Rule made in Terraform"
+  groups      = ["976708da7d-b2f2e2cf-152c-4301-923f-ed6b3b9564a3"]
+
+  target = [
+    {
+      field = "accountId"
+      value = ["344406835407"] # 'web-application-prod' demo account.
+    },
+    {
+      field = "permissionSetArn"
+      value = [aws_ssoadmin_permission_set.example.arn]
+    }
+  ]
+  target_provider_id = "aws-sso"
+  duration           = "3700"
+}
+
+
 output "saml_acs_url" {
   value = "https://${module.granted[0].web_cognito_user_pool_domain}/saml2/idpresponse"
 }
+
+output "saml_audience_uri" {
+  value = "urn:amazon:cognito:sp:${module.granted[0].web_cognito_user_pool_id}"
+}
+

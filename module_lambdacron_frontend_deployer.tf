@@ -31,6 +31,7 @@ module "lambdacron_frontend_deployer" {
       "commonfate",
       "event-handler",
       "granter",
+      "governance",
       "syncer",
       "slack-notifier",
       "cache-sync",

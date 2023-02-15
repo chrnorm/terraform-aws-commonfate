@@ -1,6 +1,29 @@
 # This file is maintained automatically by "terraform init".
 # Manual edits may be lost in future updates.
 
+provider "registry.terraform.io/common-fate/commonfate" {
+  version     = "1.1.2"
+  constraints = "~> 1.1"
+  hashes = [
+    "h1:OUQz5enTxr/hTK1zlLPeWEGNOgsFSZSjiSkzI9vi2i0=",
+    "zh:0b84f9e6ada4840d93e73809b45917f87de6139136b31fd4be6e103bdad5cfab",
+    "zh:0dde99e7b343fa01f8eefc378171fb8621bedb20f59157d6cc8e3d46c738105f",
+    "zh:1eff46879e683706a5507c89af4978f5b6e944c0af50a65a1093978c4d8c9383",
+    "zh:2ade9aa78750e192fae611da35f76f9e18b1f9cee73c372797691408d08852e2",
+    "zh:2c81c5d35001ab081224bbd6ad9853ba8a6c12d0a9836bbfdacbf7ed65e0c089",
+    "zh:569c8be27b0b53d834a23181e8c2a763c1231f8ef9f9eab486e68ec136cdc2dc",
+    "zh:6c2457af6a3746e268c8900fdac1a19590a66ccb7189def44afa0612300e823a",
+    "zh:736e4833220812cb0722bb44fbc45783aeae08ef591df40df7073511f2f6d431",
+    "zh:776dcbf9f2c51a874f92de2893dad9a690fb4f080d7226754090283c5c141172",
+    "zh:960595bc4d2f66ea05e14148f54063d73cfc452e9ebfc257efe3f33e287e6b7e",
+    "zh:a034bada8a67acc23b47c1b3b86a77e81e06ee385a966d0e0099d627ae876b23",
+    "zh:ba7da5b3a4689e4600834400ba5c7864f0298f7fd80913cdf2cd99d430029de0",
+    "zh:d0318b7f4b8f1f0413ed8260033979b532ef8150005d60ca9414c81a88444716",
+    "zh:e554fd9dedd5877642dd5d35dcb04b17c8cb50edf4bd6a9d71de27631cd605f5",
+    "zh:e8a183696be5738089784383630d4505bfa74233abab0ade36f88e72dd8df7fc",
+  ]
+}
+
 provider "registry.terraform.io/hashicorp/archive" {
   version = "2.3.0"
   hashes = [

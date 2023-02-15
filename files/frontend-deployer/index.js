@@ -19,9 +19,11 @@ function getEnv(key) {
  *
  * [
  *   'access-handler',
+ *   'cache-sync',
  *   'commonfate',
  *   'event-handler',
  *   'granter',
+ *   'governance',
  *   'syncer',
  *   'slack-notifier',
  *   'webhook',

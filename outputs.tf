@@ -16,6 +16,13 @@ output "approvals_rest_api_endpoint" {
   value       = local.approvals_api_url
 }
 
+# Governance API
+
+output "governance_rest_api_endpoint" {
+  description = "Governance REST API Endpoint URL"
+  value       = local.governance_api_url
+}
+
 ##
 # API Pagination
 ##
